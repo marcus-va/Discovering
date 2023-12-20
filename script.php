@@ -2,6 +2,7 @@
 
 // Importa a função `queryClientes()`
 require_once "query.php";
+require_once "insert.php";
 
 // Obtém os dados do formulário
 $nome = $_POST["nome"];
