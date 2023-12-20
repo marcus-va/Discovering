@@ -10,7 +10,7 @@ $firestore = new Google\Cloud\Firestore\FirestoreClient();
 $colecao = $firestore->collection("clientes");
 
 // Insere um novo documento na coleção
-function insert($cliente) {
+function insertCliente($cliente) {
 
   // Cria um novo documento
   $documento = $colecao->document();
@@ -25,6 +25,5 @@ function insert($cliente) {
 
   // Salva o documento
   $documento->save();
-}
 
-?>
+  return $documento->
