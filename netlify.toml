@@ -7,7 +7,8 @@ status = 200
 functions = ["script.php"]
 
 [functions]
-include = ["script.php"]
+include = ["insert.php", "query.php"]
 
 [context.environment]
-DATABASE_URL = "mysql://[usuário]:[senha]@[endereço]:[porta]/[banco de dados]"
+FIRESTORE_KEY = "DL7AO48wWye1fvfusK66"
+
