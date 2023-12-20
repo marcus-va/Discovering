@@ -1,0 +1,13 @@
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[build]
+functions = ["script.php"]
+
+[functions]
+include = ["script.php"]
+
+[context.environment]
+DATABASE_URL = "mysql://[usuário]:[senha]@[endereço]:[porta]/[banco de dados]"
