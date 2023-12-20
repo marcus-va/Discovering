@@ -10,4 +10,4 @@ functions = ["script.php"]
 directory = "functions"
 
 [context.environment]
-FIRESTORE_KEY = file("./firebase_key.json")
+FIRESTORE_KEY = file("./firestore_key.json")
