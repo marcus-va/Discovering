@@ -1,17 +1,25 @@
 <?php
 
-require_once "insert.php";
+// Importa a função `queryClientes()`
 require_once "query.php";
 
-// Insira um cliente
-if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["telefone"]) && isset($_POST["endereco"])) {
-  insertCliente();
-}
+// Obtém os dados do formulário
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+$telefone = $_POST["telefone"];
+$endereco = $_POST["endereco"];
 
-// Consulte os clientes
-$clientes = queryClientes();
+// Insere o cliente no banco de dados
+$cliente = [
+  "nome" => $nome,
+  "email" => $email,
+  "telefone" => $telefone,
+  "endereco" => $endereco,
+];
 
-// Imprima os clientes
-foreach ($clientes as $cliente) {
-  echo $cliente->nome . " - " . $cliente->email . " - " . $cliente->telefone . " - " . $cliente->endereco . "<br>";
-}
+queryClientes()->insert($cliente);
+
+// Redireciona para a página inicial
+header("Location: index.html");
+
+?>
