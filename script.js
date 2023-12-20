@@ -31,4 +31,4 @@ function registerCustomer() {
 }
 
 // Fetch customers on page load
-window.onload = fetchCustomers;
+window.onload = fetchCustomers();
