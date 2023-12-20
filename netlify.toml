@@ -3,12 +3,11 @@ from = "/*"
 to = "/index.html"
 status = 200
 
+[context.environment]
+FIRESTORE_KEY = "DL7AO48wWye1fvfusK66"
+
 [build]
 functions = ["script.php"]
 
 [functions]
-include = ["insert.php", "query.php"]
-
-[context.environment]
-FIRESTORE_KEY = "DL7AO48wWye1fvfusK66"
-
+directory = "functions"
