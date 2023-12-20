@@ -1,6 +1,6 @@
 // Fetch and display existing customers
 function fetchCustomers() {
-  fetch("/.netlify/functions/fetchCustomers.php")
+  fetch("/netlify/functions/fetchCustomers.php")
       .then(response => response.json())
       .then(data => {
           const customerList = document.getElementById("customerList");
@@ -19,7 +19,7 @@ function registerCustomer() {
   const form = document.getElementById("customerForm");
   const formData = new FormData(form);
 
-  fetch("/.netlify/functions/registerCustomer.php", {
+  fetch("/netlify/functions/registerCustomer.php", {
       method: "POST",
       body: formData
   })
