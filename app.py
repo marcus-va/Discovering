@@ -16,6 +16,8 @@ db = firestore.Client()
 # Initialize Flask app
 app = flask.Flask(__name__)
 
+app.app_context().push()
+
 # Fetch customers
 @app.route('/customers', methods=['GET'])
 def get_customers():
