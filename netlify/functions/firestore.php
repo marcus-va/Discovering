@@ -19,7 +19,7 @@ class Firestore
 
     public function getCustomers()
     {
-        $customersRef = $this->db->collection('clientes');
+        $customersRef = $this->db->collection('(default)');
         $snapshot = $customersRef->documents();
 
         $customers = [];
@@ -33,7 +33,7 @@ class Firestore
 
     public function addCustomer($data)
     {
-        $customersRef = $this->db->collection('clientes');
+        $customersRef = $this->db->collection('(default)');
         $customersRef->add($data);
     }
 }
