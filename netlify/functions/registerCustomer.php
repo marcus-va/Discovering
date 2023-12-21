@@ -5,10 +5,10 @@ $firestore = new Firestore();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
-        'name' => $_POST['name'],
+        'nome' => $_POST['nome'],
         'email' => $_POST['email'],
-        'phone' => $_POST['phone'],
-        'address' => $_POST['address'],
+        'telefone' => $_POST['telefone'],
+        'endereco' => $_POST['endereco'],
     ];
 
     $firestore->addCustomer($data);
