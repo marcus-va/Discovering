@@ -13,7 +13,7 @@ def fetch_customers():
     db = firestore.Client()
 
     # Get all documents from the 'clientes' collection
-    docs = db.collection("clientes").stream()
+    docs = db.collection("clientes2").stream()
 
     # Print customer information
     for doc in docs:
