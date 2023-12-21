@@ -21,7 +21,7 @@ def register_customer(nome, email, telefone, endereco):
     }
 
     # Add a new document with a generated ID
-    db.collection("clientes").add(data)
+    db.collection("clientes2").add(data)
 
 if __name__ == "__main__":
     # Example usage
