@@ -4,6 +4,10 @@ from flask_cors import CORS
 import firebase_admin
 from firebase_admin import credentials, firestore
 
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+key_file_path = os.path.join(script_dir, "assist-2u-firebase-adminsdk-51903-ec84fa9368.json")
 app = Flask(__name__)
 CORS(app)
 
