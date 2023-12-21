@@ -1,4 +1,4 @@
-const baseURL = 'https://console.cloud.google.com/firestore/databases/assiti/data/panel/clientes?project=tanzania-408718';
+const baseURL = 'https://console.cloud.google.com/firestore/databases/assiti/data/panel/clientes2?project=tanzania-408718';
 
 function registerCustomer() {
     const nome = document.getElementById('nome').value;
