@@ -1,6 +1,7 @@
 import flask
 from flask import jsonify
 from google.cloud import firestore
+from flask_cors import CORS; CORS(app)
 
 import os
 
@@ -15,6 +16,8 @@ db = firestore.Client()
 
 # Initialize Flask app
 app = flask.Flask(__name__)
+
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.app_context().push()
 
