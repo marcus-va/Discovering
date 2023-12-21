@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"  # Adjust the build command if needed
+  functions = "functions"   # Specify the functions directory
+
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"  # You may need to adjust this based on your JavaScript build tool
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
