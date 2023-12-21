@@ -8,7 +8,7 @@ function fetchCustomers() {
 
           data.forEach(customer => {
               const customerInfo = document.createElement("div");
-              customerInfo.innerHTML = `<strong>Name:</strong> ${customer.name}, <strong>Email:</strong> ${customer.email}, <strong>Phone:</strong> ${customer.phone}, <strong>Address:</strong> ${customer.address}`;
+              customerInfo.innerHTML = `<strong>Name:</strong> ${customer.nome}, <strong>Email:</strong> ${customer.email}, <strong>Phone:</strong> ${customer.telefone}, <strong>Address:</strong> ${customer.endereco}`;
               customerList.appendChild(customerInfo);
           });
       });
